@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:navigatorscreeen/intropage.dart';
+import 'package:navigatorscreeen/splashscreen.dart/splash.dart';
 import 'package:navigatorscreeen/thirdpage.dart';
 import 'package:navigatorscreeen/forthpage.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.blueGrey.shade50,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
       ),
-      home: const MyHomePage(title: "home page"),
+      home: Splash(),
     );
   }
 }
