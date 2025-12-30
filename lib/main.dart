@@ -34,6 +34,8 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
+var namecontroller = TextEditingController();
+
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
@@ -51,20 +53,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              child: Text(
-                "hello world",
-                style: TextStyle(
-                  backgroundColor: Colors.blueGrey,
-                  fontSize: 50,
-                ),
-              ),
-            ),
+            Text("Enter your name", style: TextStyle(fontSize: 50)),
+            SizedBox(height: 20),
+            Container(width: 150, child: TextField(controller: namecontroller)),
+            SizedBox(height: 20),
+
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Intropage()),
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        Intropage(namecontroller.text.toString()),
+                  ),
                 );
               },
               child: Text("click to next"),

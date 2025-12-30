@@ -3,6 +3,9 @@ import 'package:navigatorscreeen/main.dart';
 import 'package:navigatorscreeen/thirdpage.dart';
 
 class Intropage extends StatelessWidget {
+  var MyHomePage;
+  Intropage(this.MyHomePage);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,11 +16,14 @@ class Intropage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: 150,
-              width: 150,
+              height: 250,
+              width: 250,
               color: Colors.blueAccent,
               child: Center(
-                child: Text("Welcome", style: TextStyle(fontSize: 25)),
+                child: Text(
+                  "Welcome,$MyHomePage",
+                  style: TextStyle(fontSize: 25),
+                ),
               ),
             ),
             SizedBox(height: 15),
